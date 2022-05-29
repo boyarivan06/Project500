@@ -4,9 +4,67 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project500"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" Loaded="Window_Loaded" 
+        Title="ОГЭ 2022 - информатика" Height="600" Width="800">
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="Главная">
+                <Grid Background="#FFE5E5E5">
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Готовые варианты">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="PreparedVariantsTab"></ListBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Построить вариант">
+                <Grid Background="#FFE5E5E5">
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Все задачи по номеру в КИМ">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="529*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Menu Margin="0,0,3,4">
+                        <MenuItem Header="Выбрать номер задачи" Height="23">
+
+                        </MenuItem>
+                    </Menu>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Информация">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Информация" FontSize="30" FontFamily="Constantia" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Дополнительно">
+                <Grid Background="#FFE5E5E5">
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Настройки">
+                <Grid Background="#FFE5E5E5">
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <!--<Menu>
+            <MenuItem Header="Главная" Height="32"/>
+            <MenuItem Header="Готовые варианты"/>
+            <MenuItem Header="Сгенерировать вариант"/>
+            <MenuItem Header="Все задачи по номеру в КИМ"/>
+            <MenuItem Header="Информация"/>
+        </Menu>-->
+
     </Grid>
 </Window>
