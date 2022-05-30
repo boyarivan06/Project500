@@ -16,17 +16,21 @@ using System.Windows.Shapes;
 namespace Project500
 {
     /// <summary>
-    /// Логика взаимодействия для TestQuestionInterface.xaml
+    /// Логика взаимодействия для PractiseQuestion.xaml
     /// </summary>
-    public partial class TestQuestionInterface : UserControl
+    public partial class PractiseQuestion : UserControl
     {
-        public TestQuestionInterface(Question question)
+        public PractiseQuestion()
         {
             InitializeComponent();
-            task_name.Content = question.number.ToString();
-            
-            task_image.Source = new BitmapImage(new Uri($"db/{question.file_source}", UriKind.Relative));
-            task_text.Content = question.text;
         }
     }
 }
+/*OpenFileDialog openFileDialog = new OpenFileDialog();
+if (openFileDialog.ShowDialog() == true)
+{
+Uri uri = new Uri(openFileDialog.FileName, UriKind.Absolute);
+    ImageSource imgSource = new BitmapImage(uri);
+        Avatar.Source = imgSource;
+
+}*/

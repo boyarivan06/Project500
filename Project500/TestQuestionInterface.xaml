@@ -4,19 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Project500"
-             mc:Ignorable="d" 
-             d:DesignHeight="150" d:DesignWidth="200">
+             mc:Ignorable="d" FontFamily="Constantia"
+             d:DesignHeight="400" d:DesignWidth="700">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Label x:Name="task_name" Content="Label" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180" Height="25"/>
+        <Label x:Name="task_name" Content="Label" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Width="338" Height="60"/>
         <Image x:Name="task_image" Source="img/hgh.png" Grid.Row="1" Grid.RowSpan="1"/>
-        <Label x:Name="task_text" Content="task text" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Top" Height="45" Width="180" Grid.Row="1" Margin="0,66,0,0" Grid.RowSpan="2"/>
-        <TextBox x:Name="answer_input" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="200"/>
+        <Label x:Name="task_text" Content="task text" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="114" Width="680" Grid.Row="2"/>
+        <TextBox x:Name="answer_input" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="454" Height="40"/>
     </Grid>
 </UserControl>

@@ -10,23 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Project500
 {
     /// <summary>
-    /// Логика взаимодействия для TestQuestionInterface.xaml
+    /// Логика взаимодействия для WindowWithQuestionsByNumber.xaml
     /// </summary>
-    public partial class TestQuestionInterface : UserControl
+    public partial class WindowWithQuestionsByNumber : Window
     {
-        public TestQuestionInterface(Question question)
+        public WindowWithQuestionsByNumber()
         {
             InitializeComponent();
-            task_name.Content = question.number.ToString();
-            
-            task_image.Source = new BitmapImage(new Uri($"db/{question.file_source}", UriKind.Relative));
-            task_text.Content = question.text;
         }
     }
 }

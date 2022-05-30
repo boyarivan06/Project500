@@ -91,11 +91,11 @@ namespace Project500
         private void NewUser(object sender, RoutedEventArgs e)
         {
             var user = new User { Name = name_box.Text, Password = password_box.Password, Created = DateTime.Now};
-            List<User> users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("json/users"));
+            List<User> users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("db/users"));
             users.Add(user);
             warning_label.Content = "Успешно";
             warning_label.Foreground = new SolidColorBrush(Colors.Green);
-            File.WriteAllText("json/users", JsonSerializer.Serialize(users));
+            File.WriteAllText("db/users", JsonSerializer.Serialize(users));
             //Thread.Sleep(1000);
             //bool OK = true;
             enter_button.Content = "Готово";

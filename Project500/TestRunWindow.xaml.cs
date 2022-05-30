@@ -21,21 +21,24 @@ namespace Project500
     {
         Variant my_Variant = new Variant();
         public TestRunWindow(Variant variant)
-        {
-            my_Variant = variant;
-            
+        {   
             InitializeComponent();
+            my_Variant = variant;
+            int n = 0;
+            foreach (Question question in my_Variant.questions)
+            {
+                var t = new TabItem();
+                t.Content = new TestQuestionInterface(question);
+                t.Header = question.number.ToString();
+                
+                n++;
+                if (n >= 12) break;
+            }
         }
 
         private void TestRunWindow_Loaded(object sender, RoutedEventArgs e)
         {
             
-            int n = 1;
-            foreach (Question question in my_Variant.questions)
-            {
-                test_tabs.Items[n] = new TestQuestionInterface(question);
-                n++;
-            }
         }
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Project500
 {
-    internal class PractiseQuestion
+    /*internal class PractiseQuestion
     {
-        int Id { get; set; }
-        int Number { get; set; }
-        string ImageSource { get; set; }
-        string FileSource { get; set; }
-    }
+        public int Id { get; set; }
+        public int Number { get; set; }
+        public string ImageSource { get; set; }
+        public string FileSource { get; set; }
+    }*/
 }

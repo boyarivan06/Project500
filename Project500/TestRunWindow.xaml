@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project500"
-        mc:Ignorable="d" Loaded="TestRunWindow_Loaded"
+        mc:Ignorable="d" 
         Title="TestRunWindow" Height="450" Width="800">
     <Grid>
         <TabControl x:Name="test_tabs" FontFamily="Constantia" FontSize="15">

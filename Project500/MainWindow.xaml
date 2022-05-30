@@ -4,13 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project500"
-        mc:Ignorable="d" Loaded="Window_Loaded" 
-        Title="ОГЭ 2022 - информатика" Height="600" Width="800">
+        mc:Ignorable="d" FontFamily="Constantia" Loaded="Window_Loaded"
+        Title="ОГЭ 2022 - информатика" Height="400" Width="800">
     <Grid>
         <TabControl>
             <TabItem Header="Главная">
                 <Grid Background="#FFE5E5E5">
-
+                    <Label Content="Подготовка к ОГЭ по информатике" FontSize="25" Margin="10,20,96,254"/>
+                    <Label Content="Выберите один из режимов: решать вариант целиком или одно конкретное задание" Margin="15,102,-5,192"/>
+                    <Label Content="После автоматической проверки вы получите данные, которые позволят вам более углублённо изучить темы, &#xD;&#xA;связанные с неполучившимися заданиями." VerticalAlignment="Top" Margin="10,179,-10,0"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Готовые варианты">
@@ -35,6 +37,21 @@
                     </Grid.ColumnDefinitions>
                     <Menu Margin="0,0,3,4">
                         <MenuItem Header="Выбрать номер задачи" Height="23">
+                            <MenuItem Header="1. Оценка информационного объема текста" Click="MenuItem_Click"/>
+                            <MenuItem Header="2. Декодирование кодовой последовательности" Click="MenuItem_Click_1" />
+                            <MenuItem Header="3. Определение истинности высказывания" Click="MenuItem_Click_2"/>
+                            <MenuItem Header="4. Анализ моделей объектов" Click="MenuItem_Click_3"/>
+                            <MenuItem Header="5 Анализ алгоритмов для исполнителя" Click="MenuItem_Click_4"/>
+                            <MenuItem Header="6. Анализ программ с ветвлениями" Click="MenuItem_Click_5"/>
+                            <MenuItem Header="7. Адресация в сети Интернет" Click="MenuItem_Click_6"/>
+                            <MenuItem Header="8. Поисковые запросы в сети Интернет" Click="MenuItem_Click_7"/>
+                            <MenuItem Header="9. Анализ схем (графов)" Click="MenuItem_Click_8"/>
+                            <MenuItem Header="10. Запись чисел в различных системах счисления" Click="MenuItem_Click_9"/>
+                            <MenuItem Header="11. Поиск информации в файлах и каталогах" Click="MenuItem_Click_10"/>
+                            <MenuItem Header="12. Определение количества и объема файлов" Click="MenuItem_Click_11"/>
+                            <MenuItem Header="13.1. Создание презентаций" Click="MenuItem_Click_12"/>
+                            <MenuItem Header="13.2. Набор и оформление текстового документа" Click="MenuItem_Click_13"/>
+                            <MenuItem Header="14. Обработка данных в электронной таблице" Click="MenuItem_Click_14"/>
 
                         </MenuItem>
                     </Menu>
