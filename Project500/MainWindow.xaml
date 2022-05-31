@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project500"
         mc:Ignorable="d" FontFamily="Constantia" Loaded="Window_Loaded"
-        Title="ОГЭ 2022 - информатика" Height="400" Width="800">
+        Title="ОГЭ 2022 - информатика" Height="400" Width="450">
     <Grid>
         <TabControl>
             <TabItem Header="Главная">
                 <Grid Background="#FFE5E5E5">
-                    <Label Content="Подготовка к ОГЭ по информатике" FontSize="25" Margin="10,20,96,254"/>
-                    <Label Content="Выберите один из режимов: решать вариант целиком или одно конкретное задание" Margin="15,102,-5,192"/>
-                    <Label Content="После автоматической проверки вы получите данные, которые позволят вам более углублённо изучить темы, &#xD;&#xA;связанные с неполучившимися заданиями." VerticalAlignment="Top" Margin="10,179,-10,0"/>
+                    <Label Content="Подготовка к ОГЭ по информатике" FontSize="25" Margin="10,20,10,254"/>
+                    <Label FontSize="15" Content="Выберите один из режимов: решать вариант целиком или &#xD;&#xA;одно конкретное задание" Margin="5,96,5,198"/>
+                    <Label FontSize="15" Content="После автоматической проверки вы получите данные, &#xD;&#xA;которые позволят вам более углублённо изучить темы, &#xA;связанные с неполучившимися заданиями." VerticalAlignment="Center" Margin="5,0,-5,0"/>
+                    <Label FontSize="15" Content="Также имеется возможность запустить музыку через &#xD;&#xA;вкладку 'Музыка'. Со своей стороны, советуем &#xA;при выполнении умственной работы слушать &#xD;&#xA;классическую музыку." Margin="5,199,5,24" />
                 </Grid>
             </TabItem>
             <TabItem Header="Готовые варианты">
@@ -20,11 +21,11 @@
                     <ListBox x:Name="PreparedVariantsTab"></ListBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Построить вариант">
+            <!--<TabItem Header="Построить вариант">
                 <Grid Background="#FFE5E5E5">
 
                 </Grid>
-            </TabItem>
+            </TabItem>-->
             <TabItem Header="Все задачи по номеру в КИМ">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
@@ -61,17 +62,17 @@
             <TabItem Header="Информация">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Информация" FontSize="30" FontFamily="Constantia" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-
+                    <Label FontSize="20" Content="Автор - Иван Бояринцев, май 2022" Margin="0,62,0,0"/>
+                    <Label FontSize="20" Content="Права, к сожалению, не защищены" Margin="0,122,0,0"/>
+                    <Label FontSize="20" Content="Обратная связь: elensilalumenn@yandex.ru" Margin="0,179,0,0"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Дополнительно">
-                <Grid Background="#FFE5E5E5">
-
-                </Grid>
+            <TabItem Header="Музыка">
+                <local:MusicPlayer HorizontalAlignment="Center"></local:MusicPlayer>
             </TabItem>
             <TabItem Header="Настройки">
                 <Grid Background="#FFE5E5E5">
-
+                    <Label FontSize="25" Foreground="Red" FontWeight="Bold" Content="В процессе разработки" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
             </TabItem>
         </TabControl>

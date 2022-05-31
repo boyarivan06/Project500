@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project500"
-        mc:Ignorable="d"
-        Title="WindowWithQuestionsByNumber" Height="600" Width="800">
+        mc:Ignorable="d" FontFamily="Constantia"
+        Title="Задания по номеру" Height="600" Width="800">
     <Grid>
         <ListBox x:Name="main_list" d:ItemsSource="{d:SampleData ItemCount=5}"/>
 

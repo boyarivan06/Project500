@@ -20,13 +20,16 @@ namespace Project500
     /// </summary>
     public partial class TestQuestionInterface : UserControl
     {
+        public Question self_question = new Question();
         public TestQuestionInterface(Question question)
         {
             InitializeComponent();
             task_name.Content = question.number.ToString();
-            
-            task_image.Source = new BitmapImage(new Uri($"db/{question.file_source}", UriKind.Relative));
-            task_text.Content = question.text;
+            self_question = question;
+            task_image.Source = new BitmapImage(new Uri($"{question.file_source}", UriKind.Relative));
+            task_text.Content = $"{question.text}";
+
         }
+        
     }
 }

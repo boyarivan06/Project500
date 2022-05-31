@@ -24,6 +24,7 @@ namespace Project500
     
     public partial class MainWindow : Window
     {
+        
         public List<Variant> Variants = new List<Variant>();
 
         public MainWindow()
@@ -207,7 +208,7 @@ namespace Project500
     }
     public class Question
     {
-
+        public int mark { get; set; }
         public int number { get; set; }
         public string text { get; set; }
         public string file_source { get; set; }

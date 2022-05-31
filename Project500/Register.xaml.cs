@@ -22,6 +22,7 @@ namespace Project500
     /// </summary>
     public partial class Register : Window
     {
+        User self_user = new User();
         public Register()
         {
             InitializeComponent();
@@ -53,6 +54,7 @@ namespace Project500
                 if (user.Name == name_box.Text && user.Password == password_box.Password)
                 {
                     OK = true;
+                    self_user = user;
                     break;
                 }
                 else if (user.Name == name_box.Text && user.Password != password_box.Password)
@@ -62,6 +64,7 @@ namespace Project500
             }
             if (OK)
             {
+                
                 warning_label.Visibility = Visibility.Visible;
                 warning_label.Content = "Успешно";
                 warning_label.Foreground = new SolidColorBrush(Colors.Green);
@@ -91,6 +94,7 @@ namespace Project500
         private void NewUser(object sender, RoutedEventArgs e)
         {
             var user = new User { Name = name_box.Text, Password = password_box.Password, Created = DateTime.Now};
+            self_user = user;
             List<User> users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("db/users"));
             users.Add(user);
             warning_label.Content = "Успешно";
