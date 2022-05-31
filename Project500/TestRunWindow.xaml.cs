@@ -19,6 +19,7 @@ namespace Project500
     /// </summary>
     public partial class TestRunWindow : Window
     {
+        public Dictionary<Question, TextBox> answers = new Dictionary<Question, TextBox>();
         public int sum = 0;
         Variant my_Variant = new Variant();
         public TestRunWindow(Variant variant)
@@ -30,11 +31,13 @@ namespace Project500
             {
                 var t = new TabItem();
                 
-                t.Content = new TestQuestionInterface(question);
+                var tqi = new TestQuestionInterface(question);
+                answers.Add(question, tqi.answer_input);
+                t.Content = tqi;
                 t.Header = question.number.ToString();
                 test_tabs.Items.Add(t);
                 n++;
-                if (n >= 12) break;
+                if (n >= 10) break;
             }
         }
 
@@ -45,12 +48,14 @@ namespace Project500
 
         private void end_button_Click(object sender, RoutedEventArgs e)
         {
-            foreach (TabItem tabItem in test_tabs.Items)
+            
+            
+            foreach (Question question in answers.Keys)
             {
-                TestQuestionInterface questionInterface = tabItem.Content as TestQuestionInterface;
-                Question question = questionInterface.self_question;
-                if (questionInterface.answer_input.Text == question.answer)
+                if (answers[question].Text == question.answer)
+                {
                     sum += question.mark;
+                }
             }
             end_button.Content = sum.ToString();
             end_button.IsEnabled = false;

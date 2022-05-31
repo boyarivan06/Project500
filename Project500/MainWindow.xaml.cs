@@ -151,8 +151,23 @@ namespace Project500
         private void NewWindowWithQuestionsByNumber(List<Question> questions, int n)
         {
             var w = new WindowWithQuestionsByNumber();
+            foreach (Question question in questions)
+            {
+                var t = new TabItem();
+
+                var tqi = new TestQuestionInterface(question);
+                w.answers.Add(question, tqi.answer_input);
+                
+                w.main_list.Items.Add(tqi);
+                //n++;
+                //if (n >= 10) break;
+            }
+            var b = new Button { Content = "Завершить", Name = "end_button", HorizontalAlignment = HorizontalAlignment.Center, FontSize = 20 };
+            b.Click += w.end_button_Click;
+            w.main_list.Items.Add(b);
+            
             w.Title = $"Задание {n}";
-            foreach (Question question in questions) w.main_list.Items.Add(new TestQuestionInterface(question));
+            
             
             w.Show();
 
