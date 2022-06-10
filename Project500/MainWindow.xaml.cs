@@ -43,7 +43,7 @@ namespace Project500
             //FirstDialog.Closing += FirstDialog_Closing;
             FirstDialog.ShowDialog();
 
-            var subVariants = JsonSerializer.Deserialize<List<List<Question>>>(File.ReadAllText("db/variants"));
+            var subVariants = JsonSerializer.Deserialize<List<List<Question>>>(File.ReadAllText("db/variants.txt"));
 
             int n = 1;
             foreach (var variant in subVariants)
@@ -185,7 +185,7 @@ namespace Project500
         private void GetQuestionByNumber(int n)
         {
             var ret = new List<Question>();
-            foreach (List<Question> variant_list in JsonSerializer.Deserialize<List<List<Question>>>(File.ReadAllText("db/variants")))
+            foreach (List<Question> variant_list in JsonSerializer.Deserialize<List<List<Question>>>(File.ReadAllText("db/variants.txt")))
             {
                 foreach (Question question in variant_list)
                 {

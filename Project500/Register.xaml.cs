@@ -46,7 +46,7 @@ namespace Project500
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            List<User> users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("db/users"));
+            List<User> users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("db/users.txt"));
             bool OK = false;
             bool only_name = false;
             foreach (User user in users)
